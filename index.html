@@ -56,33 +56,32 @@ body{
     </style>
 </head>
 <body>
-<div class="box"><br>Next Period in<br> 
-<div id="timer" style=""><div id="days"></div></div>
-          <p>days</p></div></div>
+<div class="box"><br>Reload Before<br> 
+<div id="timer" style="">23 March 2025 </div>
 
 </body>
-<script>
-    const year = new Date().getFullYear();
-const myDate = new Date('Jan 17, 2025 00:00:00');
-console.log(myDate);
+// <script>
+//    const year = new Date().getFullYear();
+//const myDate = new Date('Jan 17, 2025 00:00:00');
+//console.log(myDate);
 
 // countdown
-let timer = setInterval(function() {
+//let timer = setInterval(function() {
 
   // get today's date
-  const today = new Date().getTime();
+//  const today = new Date().getTime();
 
   // get the difference
-  const diff = myDate - today;
+//  const diff = myDate - today;
 
   // math
-  let days = Math.floor(diff / (1000 * 60 * 60 * 24));
+//  let days = Math.floor(diff / (1000 * 60 * 60 * 24));
   //let hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
   //let minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
   //let seconds = Math.floor((diff % (1000 * 60)) / 1000);
 
   // display
-  document.getElementById("days").innerHTML=days
+ // document.getElementById("days").innerHTML=days
  // document.getElementById("hours").innerHTML=hours
   //document.getElementById("minutes").innerHTML=minutes
  // document.getElementById("seconds").innerHTML=seconds
