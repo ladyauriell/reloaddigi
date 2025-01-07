@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Agu+Display&family=Comfortaa:wght@700&family=EB+Garamond&family=Kablammo&family=Quicksand:wght@700&family=Sacramento&family=Twinkle+Star&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+
+body{
+     background-color: white;
+       display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+     
+}
+ 
+.box{
+  border-radius:25px;
+  border: 6px solid #9e788b;
+  font-family: Comfortaa;
+  text-transform: uppercase;
+  
+  text-align:center;
+  padding:20px
+  display: inline-block;
+  background: #ffb6c1;
+  color:#fff;
+  font-size:1.5em;
+ width: 100%;
+    height: 100%;
+    max-width: 230px; /* Adjust as needed */
+    max-height: 230px;
+ 
+  
+  
+}
+
+
+
+ 
+#timer {
+ 
+  font-family: Agu Display;
+  color:#735765;
+  font-weight:bold;
+  font-size:6.0em;
+  line-height: 85%;
+}
+
+    </style>
+</head>
+<body>
+<div class="box"><br>Next Period in<br> 
+<div id="timer" style=""><div id="days"></div></div>
+          <p>days</p></div></div>
+
+</body>
+<script>
+    const year = new Date().getFullYear();
+const myDate = new Date('Jan 17, 2025 00:00:00');
+console.log(myDate);
+
+// countdown
+let timer = setInterval(function() {
+
+  // get today's date
+  const today = new Date().getTime();
+
+  // get the difference
+  const diff = myDate - today;
+
+  // math
+  let days = Math.floor(diff / (1000 * 60 * 60 * 24));
+  //let hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  //let minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+  //let seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+  // display
+  document.getElementById("days").innerHTML=days
+ // document.getElementById("hours").innerHTML=hours
+  //document.getElementById("minutes").innerHTML=minutes
+ // document.getElementById("seconds").innerHTML=seconds
+
+
+
+}, 1);
+</script>
+</html>
